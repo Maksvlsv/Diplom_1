@@ -8,9 +8,14 @@ import static org.junit.Assert.*;
 public class BunTest {
 
     @Test
-    public void testBunGetNameAndPrice() {
-        Bun bun = new Bun("white bun", 150);
-        assertEquals("white bun", bun.getName());
-        assertEquals(150, bun.getPrice(), 0.01);
+    public void testGetName() {
+        Bun bun = new Bun("Test Bun", 120f);
+        assertEquals("Test Bun", bun.getName());
+    }
+
+    @Test
+    public void testGetPrice() {
+        Bun bun = new Bun("Test Bun", 120f);
+        assertEquals(120f, bun.getPrice(), 0.001);
     }
 }
